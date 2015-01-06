@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wishmain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ECEDE5" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_bottom"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#3D7751" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="心愿书单"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/wish_product_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/wish_addwish_btn" />
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            android:paddingLeft="10dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/all"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/wish_type_bg"
+                    android:text="全部分类"
+                    android:textColor="@color/seagreen" />
+
+                <Button
+                    android:id="@+id/coursebook"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/wish_type_selector"
+                    android:text="教材资料" />
+
+                <Button
+                    android:id="@+id/english"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/wish_type_selector"
+                    android:text="英语专区" />
+
+                <Button
+                    android:id="@+id/japanese"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/wish_type_selector"
+                    android:text="日语专区" />
+
+                <Button
+                    android:id="@+id/technology"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/wish_type_selector"
+                    android:text="技术养成" />
+
+                <Button
+                    android:id="@+id/master"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/wish_type_selector"
+                    android:text="考研相关" />
+
+                <Button
+                    android:id="@+id/entertain"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/wish_type_selector"
+                    android:text="休闲阅读" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+
+            <RadioGroup
+                android:id="@+id/gendergroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/highest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@drawable/radio_selector"
+                    android:checked="true"
+                    android:paddingLeft="20dp"
+                    android:text="最热" />
+
+                <RadioButton
+                    android:id="@+id/newest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:button="@drawable/radio_selector"
+                    android:paddingLeft="20dp"
+                    android:text="最新" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <com.yunjian.view.PullToRefreshView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/main_pull_refresh_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/wish_book_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000" />
+        </com.yunjian.view.PullToRefreshView>
+    </LinearLayout>
+<LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#8E441E" />
+    
+    <LinearLayout
+        android:layout_width="match_parent" 
+	        android:layout_height="58dp" 
+	        android:paddingTop="4dp" 
+	        android:paddingBottom="4dp"
+        android:orientation="horizontal"
+        android:background="#EEFFFFFF" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/main_books_btn"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bottom_mainpage_unselect"
+	      	        android:adjustViewBounds="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/main_wishes_btn"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bottom_wish_select"
+	      	        android:adjustViewBounds="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/main_person_btn"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bottom_person_unselect"
+	      	        android:adjustViewBounds="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

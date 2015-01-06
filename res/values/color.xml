@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name = "seagreen">#2E8B57</color>
+    <color name = "transparent">#66333333</color>
+    <drawable name = "transparent">#00FFFFFF</drawable>
+    <drawable name = "white">#ffffff</drawable>
+</resources>

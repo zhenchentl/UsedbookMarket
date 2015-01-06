@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ImageView 
+        android:id="@+id/wish_book_img"
+        android:layout_width="80dp"
+        android:layout_height="110dp"
+        android:background="@drawable/ic_launcher"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/wish_book_img"
+        android:orientation="vertical">
+        <TextView 
+            android:id="@+id/wish_bookname_txv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="编译原理"
+            android:textSize="18sp"/>
+        <TextView 
+            android:id="@+id/wish_wanter_txv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[发布人]CC学弟"/>
+         <TextView 
+            android:id="@+id/wish_description_txv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="范德萨发地方的说法是飞洒发生法萨芬撒菲菲撒发生"/>
+         <Button 
+            android:id="@+id/wish_helpachieve_btn"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:focusable="false"
+            android:background="@drawable/wish_help_back"
+            android:text="帮TA实现"/>
+    </LinearLayout>
+    
+    
+
+</RelativeLayout>

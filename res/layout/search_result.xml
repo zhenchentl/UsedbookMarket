@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/main_page_search"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="#3D7751"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageButton
+            android:id="@+id/search_result_back"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="4dp"
+            android:background="#0000"
+            android:src="@drawable/register_back" />
+
+        <AutoCompleteTextView
+            android:id="@+id/search_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:layout_weight="4"
+            android:background="@drawable/shape"
+            android:drawableLeft="@drawable/title"
+            android:hint="搜索"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/book_addbtn_bg"
+            android:text="搜索"
+            android:textColor="#94512A" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/history_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66333333"
+        android:visibility="visible"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:background="#99FFFFFF">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:padding="8dp"
+                    android:id="@+id/clear_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="清空历史记录"
+                    android:textSize="16sp" />
+            </LinearLayout>
+           
+
+        <com.yunjian.view.NoScrollListView
+            android:id="@+id/search_history_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </com.yunjian.view.NoScrollListView>
+        
+        
+        </LinearLayout>
+    </ScrollView>
+    
+    <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+     <HorizontalScrollView 
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+            >
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+           <Button 
+                 android:id="@+id/all"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:textColor="@color/seagreen"
+                android:text="全部分类"/>
+            <Button 
+                 android:id="@+id/coursebook"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:text="教材资料"/>
+            <Button 
+                 android:id="@+id/english"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:text="英语专区"/>
+            <Button 
+                android:id="@+id/japanese"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:text="日语专区"/>
+            <Button 
+                android:id="@+id/technology" 
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:text="技术养成"/>
+            <Button
+                android:id="@+id/master"  
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:text="考研相关"/>
+            <Button
+                android:id="@+id/entertain" 
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#ffffff"
+                android:text="休闲阅读"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+        <ListView
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            android:id="@+id/search_result_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>
